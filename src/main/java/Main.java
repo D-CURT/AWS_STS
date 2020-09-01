@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         AWSSTSService service = new AWSSTSService();
-        Credentials stsCredentials = service.getSTSCredentials("AKIAJ7DT2KMCJAFSBPIQ", "O6cyyXt3ykD5+RGcrlCg2Foo+9+UsOE1pa4NSPBJ");
+        Credentials stsCredentials = service.getSTSCredentials("accessKey", "secretKey");
         JSONObject result = new JSONObject()
                 .put("accessKey", stsCredentials.getAccessKeyId())
                 .put("secretKey", stsCredentials.getSecretAccessKey())
